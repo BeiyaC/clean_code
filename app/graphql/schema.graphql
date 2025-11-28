@@ -1,0 +1,20 @@
+scalar Uuid
+
+type Mutation {
+    testMutation: StatusPayload
+}
+
+type Query {
+    testQuery: String
+}
+
+type StatusPayload{
+    status: String!
+}
+
+type PageInfo {
+    hasNextPage: Boolean!
+    hasPreviousPage: Boolean!
+    startCursor: String
+    endCursor: String
+}

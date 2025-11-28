@@ -1,0 +1,10 @@
+.idea
+.env
+.pytest_cache
+__pycache__
+.coverage
+.vscode
+.tool-versions
+/.run/
+.ruff_cache
+

@@ -1,0 +1,53 @@
+[project]
+name = "clean_code"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aioboto3>=15.1.0",
+    "alembic>=1.15.2",
+    "anthropic>=0.69.0",
+    "ariadne>=0.26.1",
+    "asyncpg>=0.30.0",
+    "brevo-python>=1.2.0",
+    "cryptography>=44.0.2",
+    "dotenv>=0.9.9",
+    "fastapi>=0.115.12",
+    "flask>=3.1.0",
+    "greenlet>=3.1.1",
+    "httpx>=0.28.1",
+    "passlib[bcrypt]>=1.7.4",
+    "pydantic[email]>=2.11.1",
+    "pyjwt>=2.10.1",
+    "pytest-dotenv>=0.5.2",
+    "python-json-logger>=3.3.0",
+    "sqlalchemy>=2.0.40",
+    "typer>=0.20.0",
+    "uvicorn>=0.34.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "ipdb>=0.13.13",
+    "isort>=6.0.1",
+    "pyright>=1.1.398",
+    "pytest<8.1.0",
+    "pytest-asyncio<0.23.0",
+    "pytest-cov>=6.0.0",
+]
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.pyright]
+reportUnusedImport = "error"
+typeCheckingMode = "basic"
+ignore = ["scripts", "app/alembic", "ci_reboot.py", "ci_refresh.py"]
+
+
